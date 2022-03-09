@@ -1,3 +1,4 @@
+import { Contrainer } from 'react-bootstrap';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
