@@ -1,4 +1,5 @@
-import { Contrainer } from 'react-bootstrap';
+import React from 'react';
+import {Container} from 'react-bootstrap';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -9,7 +10,9 @@ const App = () => {
     <>
       <Header />
       <main>
-        <h1>Welcome to EventMaster!</h1>
+        <Container>
+          <h1>Welcome to EventMaster!</h1>
+        </Container>
       </main>
       <Footer />
     
