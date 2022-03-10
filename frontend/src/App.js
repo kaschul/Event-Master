@@ -11,7 +11,7 @@ const App = () => {
       <Header />
       <main>
         <Container>
-          <h1>Welcome to EventMaster!</h1>
+          <h1>Welcome to Event Master!</h1>
         </Container>
       </main>
       <Footer />
