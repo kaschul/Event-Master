@@ -51,9 +51,56 @@ const products = [
         date: 'March 23, 2022',
         time: '1pm',
         location: ['Pike Place Market', '85 Pike St', 'Seattle, WA'],
-        price: 20,
+        price: 20, 
         ticketsStock: 80,
         categories: ['comedy', '21+', 'Seattle, WA']
+    },
+
+    {
+        __id: '5',
+        name: 'Todd Tigers Neighborhood Live!',
+        organizer: 'Fun House Activities',
+        image: '/event-images/ToddTiger.jpg',
+        description: "Located at Parmount Theatre, a spot for entertainment and family-friendly fun.",
+        date: 'March 19, 2022',
+        time: '2pm',
+        location: ['Paramount Theatre', '901 Poppy St', 'Seattle, Wa'],
+        ticketsStock: 15,
+        categories:['kids', '8+', 'Seattle, Wa' ]
+    },
+
+    {
+        __id: '6',
+        name: 'Texas Monster Jam Madness',
+        organizer: 'Country Entertainment',
+        image: '/event-images/Monsterjam.jpg',
+        description: "Located at Southern Arena, a place to see all extreme indoor sports!",
+        date: 'April 19, 2022',
+        time: '1pm',
+        location: ['Southern Arena', '500 Jefferson Rd', 'Collge Station, TX'],
+        ticketsStock: 100,
+        categories: ['Sports', '5+', 'Collge Station, TX' ]
+    },
+
+    {
+        __id: '7',
+        name: 'Sacramento University Basketball vs. Seattle State University',
+        organizer: 'Extreme Entertainment',
+        image: '/event-images/Sacramentoseattle.jpg',
+        description: "Located at Bannerfield Park, a place to attend energeic and adrenalin pumping events.",
+        date: 'May 14, 2022',
+        time: '6pm',
+        location: ['Bannerfield Park', '404 Holiday Rd', 'Seattle, WA'],
+        ticketsStock: 20,
+        categories: ['Sports', '18+', 'Seattle, WA']
+
+
+
+
+
+
+
     }
+
 
 ]
