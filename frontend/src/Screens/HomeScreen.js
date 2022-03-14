@@ -3,7 +3,7 @@ import Product from '../components/Product'
 
 const HomeScreen = () => {
   return (
-    <div>HomeScreen</div>
+    <div><Product /></div>
   )
 }
 

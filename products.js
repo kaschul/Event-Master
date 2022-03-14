@@ -93,13 +93,6 @@ const products = [
         location: ['Bannerfield Park', '404 Holiday Rd', 'Seattle, WA'],
         ticketsStock: 20,
         categories: ['Sports', '18+', 'Seattle, WA']
-
-
-
-
-
-
-
     }
 
 
