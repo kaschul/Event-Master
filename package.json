@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "express": "^4.17.3",
-    "react-bootstrap": "^2.2.0"
+    "react-bootstrap": "^2.2.1",
+    "react-router-dom": "^6.2.2"
   },
   "name": "event-master",
   "version": "1.0.0",
