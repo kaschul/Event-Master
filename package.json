@@ -9,7 +9,10 @@
   "description": "Event Master app",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/Jazzythedev/Event-Master/issues"
   },
-  "homepage": "https://github.com/Jazzythedev/Event-Master#readme"
+  "homepage": "https://github.com/Jazzythedev/Event-Master#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
 }
