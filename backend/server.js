@@ -1,5 +1,6 @@
-const express = require('express')
-const products = require('./data/products')
+//k: changed import statements for type:module
+import express from 'express'
+import products from './data/products.js'
 
 const app = express()
 

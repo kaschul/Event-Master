@@ -99,4 +99,5 @@ const products = [
     }
 ]
 
-module.exports = products
+//k: changed export statement for type:module
+export default products
