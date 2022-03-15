@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react' //k: added useState, useEffect
 import axios from 'axios' //k: added axios
-import {Link, useParams} from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 
 
