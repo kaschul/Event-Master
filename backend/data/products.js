@@ -96,9 +96,7 @@ const products = [
         price: '150',
         ticketsStock: 20,
         categories: ['Sports', '18+', 'Seattle, WA']
-    },
-
-
+    }
 ]
 
-export default products
+module.exports = products
