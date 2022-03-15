@@ -65,7 +65,7 @@ const products = [
         date: 'March 19, 2022',
         time: '2pm',
         location: ['Paramount Theatre', '901 Poppy St', 'Seattle, Wa'],
-        price: '',
+        price: '15',
         ticketsStock: 15,
         categories:['kids', '8+', 'Seattle, Wa' ]
     },
@@ -79,7 +79,7 @@ const products = [
         date: 'April 19, 2022',
         time: '1pm',
         location: ['Southern Arena', '500 Jefferson Rd', 'Collge Station, TX'],
-        price: '',
+        price: '60',
         ticketsStock: 100,
         categories: ['Sports', '5+', 'Collge Station, TX' ]
     },
@@ -93,7 +93,7 @@ const products = [
         date: 'May 14, 2022',
         time: '6pm',
         location: ['Bannerfield Park', '404 Holiday Rd', 'Seattle, WA'],
-        price: '',
+        price: '150',
         ticketsStock: 20,
         categories: ['Sports', '18+', 'Seattle, WA']
     },
