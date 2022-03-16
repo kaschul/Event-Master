@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom'
 
 const Product = ({product}) => {
 
+    (() => {
+        let locationDisplay = product.location;
+        locationDisplay.join('\r\n');
+        return locationDisplay;
+    })()
+
     return (
         <Card className='my-3 p-3 rounded'>
             <Link to={`/product/${product._id}`}>
@@ -24,7 +30,7 @@ const Product = ({product}) => {
                     <Card.Subtitle>Event Details</Card.Subtitle>
                     <div id='date'>Date: {product.date}</div> 
                     <div id='time'>Time: {product.time}</div>
-                    <div id='location'>Location: {product.location}</div>
+                    <div id='location'>Location: {locationDisplay}</div>
                     <div id='categories'>{product.categories}</div>
                 </Card.Text>
                         
