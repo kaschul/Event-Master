@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Card, Row, Col, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import ReactHtmlParser from 'react-html-parser'
 
@@ -21,11 +21,31 @@ const Product = ({product}) => {
 
                 <Card.Text as='div'>
                     <div id='organizer'>by {product.organizer}</div>
-                    <br />
-                    <Card.Subtitle>Event Details</Card.Subtitle>
-                    <div id='date'><strong>Date:</strong> {product.date}</div> 
-                    <div id='time'><strong>Time:</strong> {product.time}</div>
-                    <div id='location'><strong>Location:</strong> {ReactHtmlParser(product.location)}</div>
+                    <br></br>
+                    <Row>
+                        <Col md="3">
+                            <div id='dateLabel'><strong>Date:</strong></div>
+                        </Col> 
+                        <Col>
+                            <div id='dateDisplay'>{product.date}</div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md="3">
+                            <div id='timeLabel' ><strong>Time:</strong></div>
+                        </Col>
+                        <Col>
+                            <div id='timeDisplay'>{product.time}</div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md="3">
+                            <div id='locationLabel'><strong>Location:</strong></div>
+                        </Col>
+                        <Col>
+                            <div id='locationDisplay'>{ReactHtmlParser(product.location)}</div>
+                        </Col>
+                    </Row>
                     <br></br>
                     <div id='categories'>{product.categories.map((p) => " [" + p + "]")}</div>
                 </Card.Text>
