@@ -27,7 +27,7 @@ const Product = ({product}) => {
                     <div id='time'><strong>Time:</strong> {product.time}</div>
                     <div id='location'><strong>Location:</strong> {ReactHtmlParser(product.location)}</div>
                     <br></br>
-                    <div id='categories'>{product.categories.map((p) => " " + p)}</div>
+                    <div id='categories'>{product.categories.map((p) => " [" + p + "]")}</div>
                 </Card.Text>
                         
                 <Card.Text as='h3'>${product.price}</Card.Text>
