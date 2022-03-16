@@ -1,14 +1,17 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import ReactHtmlParser from 'react-html-parser'
 
 
 const Product = ({product}) => {
 
+    let newDisplay = '';
     (() => {
         let locationDisplay = product.location;
-        locationDisplay.join('\r\n');
-        return locationDisplay;
+        let brk = locationDisplay.split('~');
+        let res = brk.join(" <br/> ");
+        newDisplay=("<br/>" + res);
     })()
 
     return (
@@ -30,8 +33,8 @@ const Product = ({product}) => {
                     <Card.Subtitle>Event Details</Card.Subtitle>
                     <div id='date'>Date: {product.date}</div> 
                     <div id='time'>Time: {product.time}</div>
-                    <div id='location'>Location: {locationDisplay}</div>
-                    <div id='categories'>{product.categories}</div>
+                    <div id='location'>Location: {ReactHtmlParser(newDisplay)}</div>
+                    <div id='categories'>{product.categories.map((p) => " " + p)}</div>
                 </Card.Text>
                         
                 <Card.Text as='h3'>${product.price}</Card.Text>
