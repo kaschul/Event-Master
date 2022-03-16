@@ -37,13 +37,15 @@ const ProductScreen = () => {
       
             <ListGroup.Item>by {product.organizer}</ListGroup.Item>
 
-            <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+            <ListGroup.Item>{product.description}</ListGroup.Item>
 
-            <ListGroup.Item>Description: {product.description}</ListGroup.Item>
+            <ListGroup.Item><strong>When:</strong> 
+              <br/>{product.date} at {product.time}</ListGroup.Item>
 
-            <ListGroup.Item>When: {product.date} at {product.time}</ListGroup.Item>
+            <ListGroup.Item><strong>Where:</strong> 
+              <br/>{product.location}</ListGroup.Item>
 
-            <ListGroup.Item>Where: {product.location}</ListGroup.Item>
+            <ListGroup.Item><strong>Tickets: <h4>${product.price}</h4></strong></ListGroup.Item>
           </ListGroup>
         </Col>
 

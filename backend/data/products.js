@@ -8,7 +8,7 @@ const products = [
         description: "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
         date: 'March 27th, 2022',
         time: '5pm - 9pm',
-        location: ['University of Puget Sound', '1500 N Warner St', 'Tacoma, WA 98416', 'Thompson Hall room 295'],
+        location: 'University of Puget Sound~1500 N Warner St~Tacoma, WA 98416~Thompson Hall room 295',
         price: 10,
         ticketsStock: 50,
         categories: ['family friendly', 'science', 'museum', 'Tacoma, WA']
@@ -22,7 +22,7 @@ const products = [
         description: "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
         date: 'April 17th, 2022',
         time: '5pm - 19pm',
-        location: ['University of Puget Sound', '1500 N Warner St', 'Tacoma, WA 98416', 'Thompson Hall room 295'],
+        location: 'University of Puget Sound~1500 N Warner St~Tacoma, WA 98416~Thompson Hall room 295',
         price: 10,
         ticketsStock: 50,
         categories: ['family friendly', 'science', 'museum', 'Tacoma, WA']
@@ -36,7 +36,7 @@ const products = [
         description: "Chat and mingle at this black tie private event at the Burke Museum.  Join the silent auction and meet local artists.  Dinner and drinks are included in ticket price, admissions are 21+ only.  All proceeds support The Soceity of Indigenous Artists.",
         date: 'March 23rd, 2022',
         time: '6pm - 11pm',
-        location: ['Burke Museum', '4300 15th Ave Ne', 'Seattle, WA'],
+        location: 'Burke Museum~4300 15th Ave Ne~Seattle, WA',
         price: 500,
         ticketsStock: 200,
         categories: ['art', 'museum', 'fundraiser', 'Seattle, WA', '21+']
@@ -50,7 +50,7 @@ const products = [
         description: "Located at Pike Place Market, Seattle City Improv is consistently voted one of the top comedy clubs in Seattle.",
         date: 'March 23, 2022',
         time: '1pm',
-        location: ['Pike Place Market', '85 Pike St', 'Seattle, WA'],
+        location: 'Pike Place Market~85 Pike St~Seattle, WA',
         price: 20, 
         ticketsStock: 80,
         categories: ['comedy', '21+', 'Seattle, WA']
@@ -64,7 +64,7 @@ const products = [
         description: "Located at Parmount Theatre, a spot for entertainment and family-friendly fun.",
         date: 'March 19, 2022',
         time: '2pm',
-        location: ['Paramount Theatre', '901 Poppy St', 'Seattle, Wa'],
+        location: 'Paramount Theatre~901 Poppy St~Seattle, Wa',
         price: '15',
         ticketsStock: 15,
         categories:['kids', '8+', 'Seattle, Wa' ]
@@ -78,10 +78,10 @@ const products = [
         description: "Located at Southern Arena, a place to see all extreme indoor sports!",
         date: 'April 19, 2022',
         time: '1pm',
-        location: ['Southern Arena', '500 Jefferson Rd', 'Collge Station, TX'],
+        location: 'Southern Arena~500 Jefferson Rd~Collge Station, TX',
         price: '60',
         ticketsStock: 100,
-        categories: ['Sports', '5+', 'Collge Station, TX' ]
+        categories: ['Sports', '5+', 'College Station, TX' ]
     },
 
     {
@@ -92,7 +92,7 @@ const products = [
         description: "Located at Bannerfield Park, a place to attend energeic and adrenalin pumping events.",
         date: 'May 14, 2022',
         time: '6pm',
-        location: ['Bannerfield Park', '404 Holiday Rd', 'Seattle, WA'],
+        location: 'Bannerfield Park~404 Holiday Rd~Seattle, WA',
         price: '150',
         ticketsStock: 20,
         categories: ['Sports', '18+', 'Seattle, WA']
