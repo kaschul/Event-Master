@@ -6,14 +6,6 @@ import ReactHtmlParser from 'react-html-parser'
 
 const Product = ({product}) => {
 
-    let newDisplay = '';
-    (() => {
-        let locationDisplay = product.location;
-        let brk = locationDisplay.split('~');
-        let res = brk.join(" <br/> ");
-        newDisplay=("<br/>" + res);
-    })()
-
     return (
         <Card className='my-3 p-3 rounded'>
             <Link to={`/product/${product._id}`}>
@@ -31,9 +23,10 @@ const Product = ({product}) => {
                     <div id='organizer'>by {product.organizer}</div>
                     <br />
                     <Card.Subtitle>Event Details</Card.Subtitle>
-                    <div id='date'>Date: {product.date}</div> 
-                    <div id='time'>Time: {product.time}</div>
-                    <div id='location'>Location: {ReactHtmlParser(newDisplay)}</div>
+                    <div id='date'><strong>Date:</strong> {product.date}</div> 
+                    <div id='time'><strong>Time:</strong> {product.time}</div>
+                    <div id='location'><strong>Location:</strong> {ReactHtmlParser(product.location)}</div>
+                    <br></br>
                     <div id='categories'>{product.categories.map((p) => " " + p)}</div>
                 </Card.Text>
                         

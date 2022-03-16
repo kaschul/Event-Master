@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
-
-
+import ReactHtmlParser from 'react-html-parser'
 
 const ProductScreen = () => {
 
@@ -15,9 +14,8 @@ const ProductScreen = () => {
       const {data} = await axios.get(`/api/products/${params.id}`)
       setProduct(data)
     }
-    fetchProduct()
+    fetchProduct()  
   })
-
 
   return (
     <>
@@ -43,7 +41,7 @@ const ProductScreen = () => {
               <br/>{product.date} at {product.time}</ListGroup.Item>
 
             <ListGroup.Item><strong>Where:</strong> 
-              <br/>{product.location}</ListGroup.Item>
+              <br/>{ReactHtmlParser(product.location)}</ListGroup.Item>
 
             <ListGroup.Item><strong>Tickets: <h4>${product.price}</h4></strong></ListGroup.Item>
           </ListGroup>
