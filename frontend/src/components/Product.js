@@ -37,16 +37,3 @@ const Product = ({product}) => {
 }
 
 export default Product
-
-/* ex:  _id: '4',
-        name: 'The Wednesday Comedy Show',
-        organizer: 'Seattle City Improv',
-        image: '/event-images/wednesdaycomedyshow.jpg',
-        description: "Located at Pike Place Market, Seattle City Improv is consistently voted one of the top comedy clubs in Seattle.",
-        date: 'March 23, 2022',
-        time: '1pm',
-        location: ['Pike Place Market', '85 Pike St', 'Seattle, WA'],
-        price: 20,
-        ticketsStock: 80,
-        categories: ['comedy', '21+', 'Seattle, WA']
-*/
