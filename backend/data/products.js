@@ -1,21 +1,21 @@
 const products = [
 
     {
-        __id: '1',
+        _id: '1',
         name: 'Events after Dark - Bodies and Bones',
         organizer: 'Slater Museum of Natural History',
         image: '/event-images/eventsafterdark.jpg',
         description: "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
         date: 'March 27th, 2022',
-        location: ['University of Puget Sound', '1500 N Warner St', 'Tacoma, WA 98416', 'Thompson Hall room 295'],
         time: '5pm - 9pm',
+        location: ['University of Puget Sound', '1500 N Warner St', 'Tacoma, WA 98416', 'Thompson Hall room 295'],
         price: 10,
         ticketsStock: 50,
         categories: ['family friendly', 'science', 'museum', 'Tacoma, WA']
         },
 
     {
-        __id: '2',
+        _id: '2',
         name: 'Events after Dark - Creatures of the Sea',
         organizer: 'Slater Museum of Natural History',
         image: '/event-images/eventsafterdark.jpg',
@@ -57,7 +57,7 @@ const products = [
     },
 
     {
-        __id: '5',
+        _id: '5',
         name: 'Todd Tigers Neighborhood Live!',
         organizer: 'Fun House Activities',
         image: '/event-images/ToddTiger.jpg',
@@ -71,7 +71,7 @@ const products = [
     },
 
     {
-        __id: '6',
+        _id: '6',
         name: 'Texas Monster Jam Madness',
         organizer: 'Country Entertainment',
         image: '/event-images/Monsterjam.jpg',
@@ -85,7 +85,7 @@ const products = [
     },
 
     {
-        __id: '7',
+        _id: '7',
         name: 'Sacramento University Basketball vs. Seattle State University',
         organizer: 'Extreme Entertainment',
         image: '/event-images/Sacramentoseattle.jpg',
