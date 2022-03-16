@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react' //k: added useState, useEffect
-import axios from 'axios' //k: added axios
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 
 
 
 const ProductScreen = () => {
-  const params = useParams(); //k: added useState, useEffect, axios - hook
+
+  const params = useParams();
   const [product, setProduct] = useState({})
+
   useEffect(() => {
     const fetchProduct = async () => {
       const {data} = await axios.get(`/api/products/${params.id}`)
@@ -15,6 +17,7 @@ const ProductScreen = () => {
     }
     fetchProduct()
   }, [])
+
 
   return (
     <>
@@ -78,7 +81,7 @@ const ProductScreen = () => {
         </Col>
       </Row>
     </>
-  ) 
+  )
 }
 
 export default ProductScreen
