@@ -70,7 +70,7 @@ const products = [
       "Located at Parmount Theatre, a spot for entertainment and family-friendly fun.",
     date: "March 19, 2022",
     time: "2:00 PM",
-    location: "Paramount Theatre <br> 901 Poppy St <br> Seattle, Wa",
+    location: "Paramount Theatre <br> 901 Poppy St <br> Seattle, WA",
     price: "15",
     ticketsStock: 15,
     categories: ["kids", "8+", "Seattle, WA"],
