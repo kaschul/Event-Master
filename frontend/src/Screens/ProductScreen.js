@@ -27,7 +27,7 @@ const ProductScreen = () => {
       
       <Row>
       
-        <Col md={4}>
+        <Col md={3}>
           <Row>
             <Image src={product.image} alt={product.name} fluid />
           </Row>
@@ -67,7 +67,7 @@ const ProductScreen = () => {
         </Col>
         
 
-        <Col md={4}>
+        <Col md={6}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h3>{product.name}</h3>
