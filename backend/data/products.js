@@ -7,7 +7,7 @@ const products = [
     description:
       "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
     date: "March 27th, 2022",
-    time: "5pm - 9pm",
+    time: "5:00 PM - 9:00 PM",
     location:
       "University of Puget Sound <br> 1500 N Warner St <br> Tacoma, WA 98416 <br> Thompson Hall room 295",
     price: 10,
@@ -23,7 +23,7 @@ const products = [
     description:
       "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
     date: "April 17th, 2022",
-    time: "5pm - 19pm",
+    time: "5:00 PM - 9:00 PM",
     location:
       "University of Puget Sound <br> 1500 N Warner St <br> Tacoma, WA 98416 <br> Thompson Hall room 295",
     price: 10,
@@ -39,7 +39,7 @@ const products = [
     description:
       "Chat and mingle at this black tie private event at the Burke Museum.  Join the silent auction and meet local artists.  Dinner and drinks are included in ticket price, admissions are 21+ only.  All proceeds support The Soceity of Indigenous Artists.",
     date: "March 23rd, 2022",
-    time: "6pm - 11pm",
+    time: "6:00 PM - 11:00 PM",
     location: "Burke Museum <br> 4300 15th Ave Ne <br> Seattle, WA",
     price: 500,
     ticketsStock: 200,
@@ -54,7 +54,7 @@ const products = [
     description:
       "Located at Pike Place Market, Seattle City Improv is consistently voted one of the top comedy clubs in Seattle.",
     date: "March 23, 2022",
-    time: "1pm",
+    time: "1:30 PM",
     location: "Pike Place Market <br> 85 Pike St <br> Seattle, WA",
     price: 20,
     ticketsStock: 80,
@@ -69,11 +69,11 @@ const products = [
     description:
       "Located at Parmount Theatre, a spot for entertainment and family-friendly fun.",
     date: "March 19, 2022",
-    time: "2pm",
+    time: "2:00 PM",
     location: "Paramount Theatre <br> 901 Poppy St <br> Seattle, Wa",
     price: "15",
     ticketsStock: 15,
-    categories: ["kids", "8+", "Seattle, Wa"],
+    categories: ["kids", "8+", "Seattle, WA"],
   },
 
   {
@@ -84,7 +84,7 @@ const products = [
     description:
       "Located at Southern Arena, a place to see all extreme indoor sports!",
     date: "April 19, 2022",
-    time: "1pm",
+    time: "1:00 PM",
     location: "Southern Arena <br> 500 Jefferson Rd <br> College Station, TX",
     price: "60",
     ticketsStock: 100,
@@ -99,7 +99,7 @@ const products = [
     description:
       "Located at Bannerfield Park, a place to attend energeic and adrenalin pumping events.",
     date: "May 14, 2022",
-    time: "6pm",
+    time: "6:00 PM",
     location: "Bannerfield Park <br> 404 Holiday Rd <br> Seattle, WA",
     price: "150",
     ticketsStock: 20,
