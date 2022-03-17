@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
+import { Row, Col, Image, ListGroup, Card, Button, Container } from 'react-bootstrap'
 import ReactHtmlParser from 'react-html-parser'
 
 const ProductScreen = () => {
@@ -22,32 +22,17 @@ const ProductScreen = () => {
       <Link className='btn btn-light my-3' to='/'>
         Go Back
       </Link>
-      <Row>
-        <Col md={6}>
-          <Image src={product.image} alt={product.name} fluid />
-        </Col>
 
-        <Col md={3}>
-          <ListGroup variant='flush'>
-            <ListGroup.Item>
-              <h3>{product.name}</h3>
-            </ListGroup.Item>
+      <Container fluid>
       
-            <ListGroup.Item>by {product.organizer}</ListGroup.Item>
+      <Row>
+      
+        <Col md={4}>
+          <Row>
+            <Image src={product.image} alt={product.name} fluid />
+          </Row>
 
-            <ListGroup.Item>{product.description}</ListGroup.Item>
-
-            <ListGroup.Item><strong>When:</strong> 
-              <br/>{product.date} at {product.time}</ListGroup.Item>
-
-            <ListGroup.Item><strong>Where:</strong> 
-              <br/>{ReactHtmlParser(product.location)}</ListGroup.Item>
-
-            <ListGroup.Item><strong>Tickets: <h4>${product.price}</h4></strong></ListGroup.Item>
-          </ListGroup>
-        </Col>
-
-        <Col md={3}>
+          <Row>
           <Card>
             <ListGroup variant='flush'>
               <ListGroup.Item>
@@ -78,8 +63,34 @@ const ProductScreen = () => {
               </ListGroup.Item>
             </ListGroup>
           </Card>
+          </Row>
         </Col>
+        
+
+        <Col md={4}>
+          <ListGroup variant='flush'>
+            <ListGroup.Item>
+              <h3>{product.name}</h3>
+            </ListGroup.Item>
+      
+            <ListGroup.Item>by {product.organizer}</ListGroup.Item>
+
+            <ListGroup.Item>{product.description}</ListGroup.Item>
+
+            <ListGroup.Item><strong>When:</strong> 
+              <br/>{product.date} at {product.time}</ListGroup.Item>
+
+            <ListGroup.Item><strong>Where:</strong> 
+              <br/>{ReactHtmlParser(product.location)}</ListGroup.Item>
+
+            <ListGroup.Item><strong>Tickets: <h4>${product.price}</h4></strong></ListGroup.Item>
+          </ListGroup>
+        </Col>
+
       </Row>
+
+      </Container>
+    
     </>
   )
 }
