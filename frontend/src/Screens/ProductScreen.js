@@ -6,6 +6,7 @@ import ReactHtmlParser from 'react-html-parser'
 
 const ProductScreen = () => {
 
+  // hook
   const params = useParams();
   const [product, setProduct] = useState({})
 

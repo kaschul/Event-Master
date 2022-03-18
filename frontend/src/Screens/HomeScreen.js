@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react' //k: added useEffect, useState
+import React, { useEffect, useState } from 'react'
 import Product from '../components/Product'
 import {Row, Col} from 'react-bootstrap'
-import axios from 'axios' //k: added axios
+import axios from 'axios'
 
 const HomeScreen = () => {
 
-  //k: added useState, useEffect, axios, fetchProducts - hook
+  // hook
   const [products, setProducts] = useState([])
   useEffect(() => {
     const fetchProducts = async () => {
