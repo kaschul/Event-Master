@@ -24,7 +24,7 @@ const Product = ({product}) => {
                     <br></br>
                     <Row>
                         <Col md="3">
-                            <div id='dateLabel'><strong>Date:</strong></div>
+                            <div id='dateLabel'><strong class='text-nowrap'>Date:</strong></div>
                         </Col> 
                         <Col>
                             <div id='dateDisplay'>{product.date}</div>
@@ -32,7 +32,7 @@ const Product = ({product}) => {
                     </Row>
                     <Row>
                         <Col md="3">
-                            <div id='timeLabel' ><strong>Time:</strong></div>
+                            <div id='timeLabel'><strong class='text-nowrap'>Time:</strong></div>
                         </Col>
                         <Col>
                             <div id='timeDisplay'>{product.time}</div>
@@ -40,7 +40,7 @@ const Product = ({product}) => {
                     </Row>
                     <Row>
                         <Col md="3">
-                            <div id='locationLabel'><strong>Location:</strong></div>
+                            <div id='locationLabel'><strong class='text-nowrap'>Location:</strong></div>
                         </Col>
                         <Col>
                             <div id='locationDisplay'>{ReactHtmlParser(product.location)}</div>
