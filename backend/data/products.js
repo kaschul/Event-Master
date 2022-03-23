@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: "1",
     name: "Events after Dark - Bodies and Bones",
     organizer: "Slater Museum of Natural History",
     image: "/event-images/eventsafterdark.jpg",
@@ -16,7 +15,6 @@ const products = [
   },
 
   {
-    _id: "2",
     name: "Events after Dark - Creatures of the Sea",
     organizer: "Slater Museum of Natural History",
     image: "/event-images/eventsafterdark.jpg",
@@ -32,7 +30,6 @@ const products = [
   },
 
   {
-    _id: "3",
     name: "Drinks and Discussions - Art and Ownership",
     organizer: "The Society of Indigenous Artists",
     image: "/event-images/drinksanddiscussions.jpg",
@@ -47,7 +44,6 @@ const products = [
   },
 
   {
-    _id: "4",
     name: "The Wednesday Comedy Show",
     organizer: "Seattle City Improv",
     image: "/event-images/wednesdaycomedyshow.jpg",
@@ -62,7 +58,6 @@ const products = [
   },
 
   {
-    _id: "5",
     name: "Todd Tigers Neighborhood Live!",
     organizer: "Fun House Activities",
     image: "/event-images/ToddTiger.jpg",
@@ -77,7 +72,6 @@ const products = [
   },
 
   {
-    _id: "6",
     name: "Texas Monster Jam Madness",
     organizer: "Country Entertainment",
     image: "/event-images/Monsterjam.jpg",
@@ -92,7 +86,6 @@ const products = [
   },
 
   {
-    _id: "7",
     name: "Sacramento University Basketball vs. Seattle State University",
     organizer: "Extreme Entertainment",
     image: "/event-images/Sacramentoseattle.jpg",
@@ -106,7 +99,6 @@ const products = [
     categories: ["Sports", "18+", "Seattle, WA"],
   },
   {
-    _id: "8",
     name: "St. Patricks Day Boat Party",
     organizer: "Lake Union Charters",
     image: "/event-images/St.Patricksparty.jpg",
@@ -121,7 +113,6 @@ const products = [
     categories: ["boat", "21+", "drinks", "Seattle, WA"],
   },
   {
-    _id: "9",
     name: "Boots, Barrels, and Brews",
     organizer: "Kiwanis Club of Issaquah",
     image: "/event-images/bootsbarrelsbrews.jpg",
@@ -136,7 +127,6 @@ const products = [
     categories: ["dancing", "21+", "music", "drinks", "Issaquah, WA"],
   },
   {
-    _id: "10",
     name: "Anime Festival",
     organizer: "Sakura-Con",
     image: "/event-images/animefestival.jpg",
@@ -151,7 +141,6 @@ const products = [
     categories: ["anime", "video games", "art", "Seattle, WA"],
   },
   {
-    _id: "11",
     name: "Quilt Show",
     organizer: "Quilters Anonymous",
     image: "/event-images/Quiltshow.jpg",
@@ -166,7 +155,6 @@ const products = [
     categories: ["quilt", "art", "crafts", "Monroe, WA"],
   },
   {
-    _id: "12",
     name: "Easter Parade",
     organizer: "Snohomish Chamber",
     image: "/event-images/Easterparade.jpg",
@@ -182,5 +170,4 @@ const products = [
   },
 ];
 
-//k: changed export statement for type:module
 export default products;
