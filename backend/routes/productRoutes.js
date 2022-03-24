@@ -28,9 +28,6 @@ router.get('/:id', asyncHandler(async (req, res) => {
     res.status(404).json({message: 'Product not found, sorry.'})
 
    }
-
-
-
-    
-
 }))
+
+export default router

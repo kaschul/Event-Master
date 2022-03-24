@@ -18,7 +18,6 @@ const importData = async () => {
 
         const sampleProducts = products.map((p) => {
             return {...p, user: adminUser}
-        
         })
 
         await Products.insertMany(sampleProducts)

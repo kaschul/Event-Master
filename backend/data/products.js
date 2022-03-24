@@ -5,7 +5,7 @@ const products = [
     image: "/event-images/eventsafterdark.jpg",
     description:
       "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
-    date: "March 27th, 2022",
+    date: "March 27, 2022",
     time: "5:00 PM - 9:00 PM",
     location:
       "University of Puget Sound <br> 1500 N Warner St <br> Tacoma, WA 98416 <br> Thompson Hall room 295",
@@ -20,7 +20,7 @@ const products = [
     image: "/event-images/eventsafterdark.jpg",
     description:
       "Join us for an insider look at the research and teaching specimins that make up the Slater Museum of Natural History.  Each event features a subset of the collection, including touchable artifacts.  Space is limited, please reserve your ticket in advance.",
-    date: "April 17th, 2022",
+    date: "April 17, 2022",
     time: "5:00 PM - 9:00 PM",
     location:
       "University of Puget Sound <br> 1500 N Warner St <br> Tacoma, WA 98416 <br> Thompson Hall room 295",
@@ -35,7 +35,7 @@ const products = [
     image: "/event-images/drinksanddiscussions.jpg",
     description:
       "Chat and mingle at this black tie private event at the Burke Museum.  Join the silent auction and meet local artists.  Dinner and drinks are included in ticket price, admissions are 21+ only.  All proceeds support The Soceity of Indigenous Artists.",
-    date: "March 23rd, 2022",
+    date: "March 23, 2022",
     time: "6:00 PM - 11:00 PM",
     location: "Burke Museum <br> 4300 15th Ave Ne <br> Seattle, WA",
     price: 500,
@@ -98,13 +98,14 @@ const products = [
     ticketsStock: 20,
     categories: ["Sports", "18+", "Seattle, WA"],
   },
+
   {
     name: "St. Patricks Day Boat Party",
     organizer: "Lake Union Charters",
     image: "/event-images/St.Patricksparty.jpg",
     description:
       "Enjoy dancing, music, drinks, and fun on a boat celebrating St. Patrick's Day.",
-    date: "March 19th, 2022",
+    date: "March 19, 2022",
     time: "7:00 PM - 11:00 PM",
     location:
       "Lake Union Charters <br> 1611 Fairview Avenue East <br> Seattle, WA 98102",
@@ -112,13 +113,14 @@ const products = [
     ticketsStock: 50,
     categories: ["boat", "21+", "drinks", "Seattle, WA"],
   },
+
   {
     name: "Boots, Barrels, and Brews",
     organizer: "Kiwanis Club of Issaquah",
     image: "/event-images/bootsbarrelsbrews.jpg",
     description:
       "Enjoy live country music and line dancing while enjoying some good 80 proof ale!",
-    date: "March 25th, 2022",
+    date: "March 25, 2022",
     time: "6:30 PM - 9:30 PM",
     location:
       "Kiwanis Club of Issaquah <br> 105 Newport Way SW <br> Issaquah, WA 98027",
@@ -126,13 +128,14 @@ const products = [
     ticketsStock: 90,
     categories: ["dancing", "21+", "music", "drinks", "Issaquah, WA"],
   },
+
   {
     name: "Anime Festival",
     organizer: "Sakura-Con",
     image: "/event-images/animefestival.jpg",
     description:
       "Anual convention centered around Anime, manga and video games.",
-    date: "April 15th-17th, 2022",
+    date: "April 15-17, 2022",
     time: "7:00 AM - 9:30 PM",
     location:
       "Washington State Convention Center <br> 705 Pike ST <br> Seattle, WA 98101",
@@ -140,13 +143,14 @@ const products = [
     ticketsStock: 100,
     categories: ["anime", "video games", "art", "Seattle, WA"],
   },
+
   {
     name: "Quilt Show",
     organizer: "Quilters Anonymous",
     image: "/event-images/Quiltshow.jpg",
     description:
       "Enjoy artists from all over Washington show off their handmade quilt designs.",
-    date: "April 18th-20th, 2022",
+    date: "April 18-20, 2022",
     time: "10:00 AM - 4:00 PM",
     location:
       "Evergreen State Fairgrounds <br> 14405 179th AVE SE <br> Monroe, WA 98272",
@@ -154,13 +158,14 @@ const products = [
     ticketsStock: 50,
     categories: ["quilt", "art", "crafts", "Monroe, WA"],
   },
+
   {
     name: "Easter Parade",
     organizer: "Snohomish Chamber",
     image: "/event-images/Easterparade.jpg",
     description:
       "Come celebrate Easter in Snohomish! There will be food stalls, music, and pictures with the Easter bunny.",
-    date: "April 16th, 2022",
+    date: "April 16, 2022",
     time: "10:00 AM - 3:00 PM",
     location:
       "Downtown Snohomish <br> 21 AVE A Suite 1 <br> Snohomish, WA 98290",
