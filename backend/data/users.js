@@ -1,5 +1,4 @@
-import bcryptjs from "bcryptjs"
-import bcrypt from "bcryptjs/dist/bcrypt"
+import bcrypt from "bcryptjs"
 
 const users = [
     {
