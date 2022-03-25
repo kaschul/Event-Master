@@ -2,17 +2,14 @@ import express from 'express'
 import asyncHandler from 'express-async-handler'
 import Products from '../models/productModel.js'
 
-
-
 const router = express.Router()
-
 
 //@desc fetch all products
 //@route GET api/products
 // @access Public route
 router.get('/',
     asyncHandler(async (req, res) => {
-        const products = Products.find({})
+        const products = await Products.find({})
         res.json(products)
     }))
 
