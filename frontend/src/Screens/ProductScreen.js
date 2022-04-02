@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button, Container } from 'react-bootstrap'
 import ReactHtmlParser from 'react-html-parser'
+import Rating from '../components/Rating'
 
 const ProductScreen = () => {
 
