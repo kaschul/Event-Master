@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {Row, Col} from 'react-bootstrap'
 
@@ -22,8 +22,10 @@ const HomeScreen = () => {
   return (
     <>
       <h1> Events </h1>
-      {loading ? (<Loader />) : error ? (<Message variant='danger'>{error}</Message>) :
-      (<Row>
+      {loading ? (<Loader />) 
+        : error ? (<Message variant='danger'>{error}</Message>) 
+        : (
+        <Row>
         {products.map((product) => (                                  /* bind array of prod to html. map is for loop "for each product" lets call output product which is the map variable.*/
 
           <Col key={product._id} sm={12} md={6} lg={4} lx={3}>         
