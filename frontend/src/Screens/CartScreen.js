@@ -3,11 +3,13 @@ import { Link, useNavigate, useParams, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card, ListGroupItem } from 'react-bootstrap'
 import Message from '../components/Message'
+import { addToCart, removeFromCart } from '../actions/cartActions'
 
 
 
 const CartScreen = () => {
     const location = useLocation()
+    const dispatch = useDispatch()
     const params = useParams()
     const navigate = useNavigate()
     const productId = params.id
@@ -27,8 +29,8 @@ const CartScreen = () => {
       }
     
       const checkoutHandler = () => {
-        navigate('/login?redirect=shipping')
-      }        }
+        navigate('/login?redirect=/shipping')
+      }        
     
 
     return (
@@ -109,6 +111,7 @@ const CartScreen = () => {
             </Col>
         </Row>
     )
+}
 
                             
 
