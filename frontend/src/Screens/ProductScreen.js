@@ -56,7 +56,7 @@ const ProductScreen = () => {
                 </Row>
               </ListGroup.Item>
 
-              {oroduct.countInStock > 0 && (
+              {product.countInStock > 0 && (
               <ListGroup.Item>
                 <Row>
                   <Col>Status:</Col>
