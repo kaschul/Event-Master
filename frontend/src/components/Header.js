@@ -40,7 +40,7 @@ const Header = () => {
                       Logout
                     </NavDropdown.Item>
                   </NavDropdown>
-                ) : (
+                   ) : (
                   <LinkContainer to='/login'>
                     <Nav.Link><i className='fa-solid fa-bullseye'></i> Sign In</Nav.Link>
                   </LinkContainer>
