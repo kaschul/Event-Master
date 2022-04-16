@@ -56,7 +56,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password } = req.body
     
-    const userExists = await Users.findOne({ email })
+    const userExists = await Users.findOne({email})
 
     if (userExists) {
         res.status(400)
@@ -66,7 +66,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const user = await Users.create({
         name,
         email,
-        password,
+        password
     })
 
     if (user) {
