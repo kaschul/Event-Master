@@ -12,7 +12,7 @@ import RegisterScreen from './Screens/RegisterScreen.js';
 import ProfileScreen from './Screens/ProfileScreen.js';
 import ShippingScreen from './Screens/ShippingScreen.js';
 import PaymentScreen from './Screens/PaymentScreen.js';
-import PlaceOrderScreen from './screens/PlaceOrderScreen.js';
+import PlaceOrderScreen from './Screens/PlaceOrderScreen.js';
 
 
 
