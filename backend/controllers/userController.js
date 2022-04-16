@@ -1,6 +1,5 @@
 import bcryptjs from 'bcryptjs'
 import asyncHandler from 'express-async-handler'
-
 import Users from '../models/userModel.js'
 import generateToken from '../utils/generateToken.js'
 
@@ -67,7 +66,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const user = await Users.create({
         name,
         email,
-        password
+        password,
     })
 
     if (user) {
