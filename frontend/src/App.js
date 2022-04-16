@@ -1,17 +1,18 @@
+import React from 'react';
 import {Container} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HomeScreen from './Screens/HomeScreen';
-import ProductScreen from './Screens/ProductScreen';
-import CartScreen from './Screens/CartScreen';
-import LoginScreen from './Screens/LoginScreen';
-import RegisterScreen from './Screens/RegisterScreen';
-import ProfileScreen from './Screens/ProfileScreen';
-import ShippingScreen from './Screens/ShippingScreen';
-import PaymentScreen from './Screens/PaymentScreen';
-import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import HomeScreen from './Screens/HomeScreen.js';
+import ProductScreen from './Screens/ProductScreen.js';
+import CartScreen from './Screens/CartScreen.js';
+import LoginScreen from './Screens/LoginScreen.js';
+import RegisterScreen from './Screens/RegisterScreen.js';
+import ProfileScreen from './Screens/ProfileScreen.js';
+import ShippingScreen from './Screens/ShippingScreen.js';
+import PaymentScreen from './Screens/PaymentScreen.js';
+import PlaceOrderScreen from './screens/PlaceOrderScreen.js';
 
 
 
