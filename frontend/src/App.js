@@ -16,7 +16,6 @@ import PlaceOrderScreen from './Screens/PlaceOrderScreen.js';
 
 
 
-// arrow function
 const App = () => {
   return (
   <>
