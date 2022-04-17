@@ -2,8 +2,8 @@ import React from 'react';
 import {Container} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Header from "./components/Header.js";
-import Footer from "./components/Footer.js";
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 import HomeScreen from './Screens/HomeScreen.js';
 import ProductScreen from './Screens/ProductScreen.js';
 import CartScreen from './Screens/CartScreen.js';
@@ -20,13 +20,13 @@ import PlaceOrderScreen from './Screens/PlaceOrderScreen.js';
 const App = () => {
   return (
   <>
-    <Router>                                           {/*Make all components routable  */}
+    <Router>                                                                          {/* enclose in Router to make all components routable */}
         <Header />                
-          <main className='py-3'>                       {/*create space between header and homescreen  */}
+          <main className='py-3'>                                                     {/* create space between header and homescreen  */}
             <Container>
           
             <Routes>
-              <Route path='/' element={<HomeScreen />} exact />                       {/*url defined to homescreen '/' means its fixed "exact provides specificity" */}
+              <Route path='/' element={<HomeScreen />} exact />                       {/* url defined to homescreen '/' means its fixed "exact provides specificity" */}
               <Route path='/product/:id' element={<ProductScreen />} />               {/* : is changing part of URL, element is component you go to */}
               <Route path='/cart' element={<CartScreen />} />
               <Route path='/cart/:id' element={<CartScreen />} />
