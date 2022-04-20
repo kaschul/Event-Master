@@ -18,14 +18,17 @@ export const productListReducer = (state = {products: []}, action) => {
     }
 }
 
-export const productDetailsReducer = (state = { product: { reviews: [] } }, action) => {
+export const productDetailsReducer = (
+    state = { product: { reviews: [] } }, 
+    action
+    ) => {
     switch (action.type) {
         case PRODUCT_DETAILS_REQUEST:
-            return {loading: true, ...state}                                /* '...' SPREAD OPERATOR allows you to copy all or part of an existing array or object into another array or object */ 
+            return { loading: true, ...state }                                /* '...' SPREAD OPERATOR allows you to copy all or part of an existing array or object into another array or object */ 
         case PRODUCT_DETAILS_SUCCESS:
-            return {loading: false, product: action.payload}                /* product (singular) because one product */
+            return { loading: false, product: action.payload }                /* product (singular) because one product */
         case PRODUCT_DETAILS_FAIL:
-            return {loading: false, error: action.payload}
+            return { loading: false, error: action.payload }
         default:
             return state
     }
