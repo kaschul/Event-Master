@@ -3,7 +3,6 @@ import { Card, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import ReactHtmlParser from 'react-html-parser'
 
-
 const Product = ({product}) => {
 
     return (
