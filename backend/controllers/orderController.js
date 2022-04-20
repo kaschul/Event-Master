@@ -21,7 +21,6 @@ const addOrderItems = asyncHandler(async (req, res) => {
     if (!orderItems || orderItems.length === 0) {
         res.status(400)
         throw new Error('No items in order')
-
     } else {
         const order = new Order({
             user: req.user._id,
