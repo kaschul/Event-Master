@@ -12,6 +12,7 @@ import RegisterScreen from './Screens/RegisterScreen.js';
 import ProfileScreen from './Screens/ProfileScreen.js';
 import ShippingScreen from './Screens/ShippingScreen.js';
 import PaymentScreen from './Screens/PaymentScreen.js';
+import OrderScreen from './Screens/OrderScreen.js';
 import PlaceOrderScreen from './Screens/PlaceOrderScreen.js';
 
 
@@ -34,6 +35,7 @@ const App = () => {
               <Route path='/profile' element={<ProfileScreen />} />
               <Route path='/shipping' element={<ShippingScreen />} />
               <Route path='/payment' element={<PaymentScreen />} />
+              <Route path='/order/:id' element={<OrderScreen />} />
               <Route path='/placeorder' element={<PlaceOrderScreen />} />
             </Routes>
 
@@ -41,7 +43,6 @@ const App = () => {
           </main>
         <Footer />
       </Router>
-      
   </>
   );
 }
