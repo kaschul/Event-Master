@@ -144,8 +144,53 @@ const OrderScreen = () => {
                     </ListGroup.Item>
                 </ListGroup>
             </Col>
-                                    // code to add here
+            <Col md={4}>
+                <Card>
+                    <ListGroup variant='flush'>
+                        <ListGroup.Item>
+                            <h2>Order Summary</h2>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Row>
+                                <Col>Items</Col>
+                                <Col>${order.itemsPrice}</Col>
+                            </Row>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Col>Shipping</Col>
+                            <Col>${order.shippingPrice}</Col>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Row>
+                                <Col>Tax</Col>
+                                <Col>${order.taxPrice}</Col>
+                            </Row>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Row>
+                                <Col>Total</Col>
+                                <Col>${order.totalPrice}</Col>
+                            </Row>
+                        </ListGroup.Item>
+                        {!order.isPaid && (
+                            <ListGroup.Item>
+                                {loadingPay && <Loader />}
+                                {!sdkReady ? (
+                                    <Loader />
+                                ) : (
+                                    <PayPalButton
+                                        amount={order.totalPrice}
+                                        onSuccess={successPaymentHandler}
+                                    />
+                                )}
+                            </ListGroup.Item>
+                        )}
+                    </ListGroup>
+                </Card>
+            </Col>
         </Row>
         </>
     )
 }
+
+export default OrderScreen
