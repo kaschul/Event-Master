@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import { Link, useNavigate, useParams, useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { Row, Col, ListGroup, Image, Form, Button, Card, ListGroupItem } from 'react-bootstrap'
+import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
 
 
 const CartScreen = () => {
+
     const location = useLocation()
     const dispatch = useDispatch()
     const params = useParams()
@@ -19,18 +20,18 @@ const CartScreen = () => {
         if (productId){
             dispatch(addToCart(productId, qty))
         }
-      }, [dispatch, productId, qty])
+    }, [dispatch, productId, qty])
     
-      const cart = useSelector((state) => state.cart)
-      const {cartItems} = cart
+    const cart = useSelector((state) => state.cart)
+    const {cartItems} = cart
     
-      const removeFromCartHandler = (id) => {
+    const removeFromCartHandler = (id) => {
         dispatch(removeFromCart(id))
-      }
+    }
     
-      const checkoutHandler = () => {
+    const checkoutHandler = () => {
         navigate('/login?redirect=/shipping')
-      }        
+    }        
     
 
     return (
@@ -73,8 +74,10 @@ const CartScreen = () => {
                                                 )
                                             }
                                         >
-                                            {[...Array(item.countInStock).keys()].map((x) => (
-                                                <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                            {[...Array(item.ticketsStock).keys()].map((x) => (
+                                                <option key={x + 1} value={x + 1}>
+                                                    {x + 1}
+                                                </option>
                                             ))}
                                         </Form.Control>
                                     </Col>
@@ -96,15 +99,15 @@ const CartScreen = () => {
             <Col md={4}>
                 <Card>
                     <ListGroup variant='flush'>
-                        <ListGroupItem>
+                        <ListGroup.Item>
                             <h2>
                                 Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items
                             </h2>
                             ${cartItems
                                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                                 .toFixed(2)}
-                        </ListGroupItem>
-                        <ListGroupItem>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
                             <Button
                                 type='button'
                                 className='btn-block'
@@ -113,7 +116,7 @@ const CartScreen = () => {
                             >
                                 Proceed To Checkout
                             </Button>
-                        </ListGroupItem>
+                        </ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Col>

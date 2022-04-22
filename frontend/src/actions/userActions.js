@@ -19,21 +19,20 @@ import {
 
 export const login = (email, password) => async (dispatch)=> {                              //when login button is hit, action is called(login) email and pw must be passed. 
 
-  try{                            //tryblock.
-    dispatch({
-      type: USER_LOGIN_REQUEST,
-    })
+  //tryblock
+  try{
+    dispatch({ type: USER_LOGIN_REQUEST })
 
-    const config = {                    // set up a config to that the api call returns a json.
+    // set up a config to that the api call returns a json.
+    const config = {                    
       headers: {
-        'Content-Type': 'application/json',                             //key and value
+        //key and value
+        'Content-Type': 'application/json'
       }  
     }
-    const {data} = await axios.post(                                                               //pass the key email and password called password and responding email and password, which are stored in parameters called email and password. But since both sides match you can just say email and password once( INSTEAD OF WRITING email:email and password:password). This hsould all return a id, name, email, isAdmin, and token key with corresponding values. 
-      'api/users/login',
-      {email, password},                            
-      config      // attach this var so that it sets content type to application/json in header
-    )
+    //pass the key email and password called password and responding email and password, which are stored in parameters called email and password. But since both sides match you can just say email and password once( INSTEAD OF WRITING email:email and password:password). This hsould all return a id, name, email, isAdmin, and token key with corresponding values.
+    const {data} = await axios.post('api/users/login', {email, password}, config)      // attach this var so that it sets content type to application/json in header
+    
 
     dispatch({
       type: USER_LOGIN_SUCCESS,
@@ -41,18 +40,19 @@ export const login = (email, password) => async (dispatch)=> {                  
     })
 
     localStorage.setItem('userInfo', JSON.stringify(data))
-  }catch (error){
+  } catch (error) {
     dispatch({
       type: USER_LOGIN_FAIL,
       payload: 
-        error.response && error.response.data.message ? error.response.data.message : error.message
+        error.response && error.response.data.message ? 
+          error.response.data.message : error.message
           
     })
   }
 }
 
-
-export const logout = () => (dispatch) => {         //once this is fired, the local storage is emptied of the user and pass and the action userlogout is fired
+//once this is fired, the local storage is emptied of the user and pass and the action userlogout is fired
+export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo')
   dispatch({ type: USER_LOGOUT })
 }
@@ -60,29 +60,27 @@ export const logout = () => (dispatch) => {         //once this is fired, the lo
 
 export const register = (name, email, password) => async (dispatch) => {
   try {
-    dispatch({
-      type: USER_REGISTER_REQUEST,
-    })
+    dispatch({ type: USER_REGISTER_REQUEST })
 
     const config = {
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     }
     const {data} = await axios.post(
       '/api/users',
-      { name, email, password},
+      { name, email, password },
       config
     )
 
     dispatch({
       type: USER_REGISTER_SUCCESS,
-      payload: data,
+      payload: data
     })
 
     dispatch({
       type: USER_LOGIN_SUCCESS,
-      payload: data,
+      payload: data
     })
 
     localStorage.setItem('userInfo', JSON.stringify(data))
@@ -99,19 +97,15 @@ export const register = (name, email, password) => async (dispatch) => {
 
 export const getUserDetails = (id) => async (dispatch, getState) => {
   try {
-    dispatch({
-      type: USER_DETAILS_REQUEST,
-    })
+    dispatch({ type: USER_DETAILS_REQUEST })
 
-    const {
-      userLogin: {userInfo},
-    } = getState()
+    const { userLogin: {userInfo} } = getState()
 
     const config = {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${userInfo.token}`, 
-      },
+        Authorization: `Bearer ${userInfo.token}`
+      }
     }
       
     const {data} = await axios.get(`/api/users/${id}`, config)
@@ -133,13 +127,9 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
 
 export const updateUserProfile = (user) => async (dispatch, getState) => {
   try {
-    dispatch({
-      type: USER_UPDATE_PROFILE_REQUEST,
-    })
+    dispatch({ type: USER_UPDATE_PROFILE_REQUEST })
       
-    const {
-      userLogin: { userInfo },
-    } = getState()
+    const { userLogin: { userInfo } } = getState()
 
     const config = {
       headers: {
@@ -152,7 +142,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
 
     dispatch({
       type: USER_UPDATE_PROFILE_SUCCESS,
-      payload: data,
+      payload: data
     })
   } catch (error) {
     dispatch({

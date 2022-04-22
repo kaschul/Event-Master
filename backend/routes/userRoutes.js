@@ -1,9 +1,6 @@
 import express from 'express'   /* import express bc we will have more routes in here */
 import { authUser, getUserProfile, registerUser, updateUserProfile } from '../controllers/userController.js'
 import { protect } from '../middleware/authMiddleware.js'
-
-
-
 const router = express.Router()                 /* lot of things within express, just use the router library. Make an instance of just the router and store it in a var called router.  */
 
 router.route('/').post(registerUser)

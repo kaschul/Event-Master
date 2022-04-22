@@ -1,5 +1,5 @@
 import asyncHandler from 'express-async-handler'
-import Order from '../models/orderModel.js'
+import Orders from '../models/orderModel.js'
 
 
 // @desc    Create new order
@@ -21,9 +21,8 @@ const addOrderItems = asyncHandler(async (req, res) => {
     if (!orderItems || orderItems.length === 0) {
         res.status(400)
         throw new Error('No items in order')
-
     } else {
-        const order = new Order({
+        const order = new Orders({
             user: req.user._id,
             orderItems,
             shippingAddress,
@@ -39,4 +38,48 @@ const addOrderItems = asyncHandler(async (req, res) => {
     }
 })
 
-export { addOrderItems }
+// @desc Get order by ID
+// @route GET/api/orders/:id 
+// @access Private
+const getOrderById = asyncHandler(async (req, res) => {
+    const order = await Orders.findById(req.params.id).populate(
+        'user',
+        'name email'
+    )
+
+    if (order) {
+        return res.json(order)
+    } else {
+        res.status(404)
+        throw new Error('Order not found')
+    }
+})
+
+
+//@desc Update order to paid
+//@route PUT /api/orders/:id/pay
+//@access Private
+const updateOrderToPaid = asyncHandler(async (req, res) => {
+    const order = await Orders.findById(req.params.id)
+
+    if (order) {
+        order.isPaid = true
+        order.paidAt = Date.now()
+        order.paymentResult = {
+            id: req.body.id,
+            status: req.body.status,
+            update_time: req.body.update_time,
+            email_address: req.body.payer.email_address,
+        }
+
+        const updatedOrder = await order.save()
+
+        return res.json(updatedOrder)
+    } else {
+        res.status(404)
+        throw new Error('Order not found')
+    }
+})
+
+
+export { addOrderItems, getOrderById, updateOrderToPaid }
