@@ -8,6 +8,7 @@ import { addToCart, removeFromCart } from '../actions/cartActions'
 
 
 const CartScreen = () => {
+
     const location = useLocation()
     const dispatch = useDispatch()
     const params = useParams()
@@ -19,18 +20,18 @@ const CartScreen = () => {
         if (productId){
             dispatch(addToCart(productId, qty))
         }
-      }, [dispatch, productId, qty])
+    }, [dispatch, productId, qty])
     
-      const cart = useSelector((state) => state.cart)
-      const {cartItems} = cart
+    const cart = useSelector((state) => state.cart)
+    const {cartItems} = cart
     
-      const removeFromCartHandler = (id) => {
+    const removeFromCartHandler = (id) => {
         dispatch(removeFromCart(id))
-      }
+    }
     
-      const checkoutHandler = () => {
+    const checkoutHandler = () => {
         navigate('/login?redirect=/shipping')
-      }        
+    }        
     
 
     return (

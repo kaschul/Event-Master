@@ -13,17 +13,17 @@ const Product = ({product}) => {
 
             <Card.Body>
                 <Link to={`/product/${product._id}`}>
-                    <Card.Title as='div' class="text-center">
+                    <Card.Title as='div' className="text-center">
                         <strong>{product.name}</strong>
                     </Card.Title>
                 </Link>
 
                 <Card.Text as='div'>
-                    <div id='organizer' class="text-center">by {product.organizer}</div>
+                    <div id='organizer' className="text-center">by {product.organizer}</div>
                     <br></br>
                     <Row>
                         <Col md="3">
-                            <div id='dateLabel'><strong class='text-nowrap'>Date:</strong></div>
+                            <div id='dateLabel'><strong className='text-nowrap'>Date:</strong></div>
                         </Col> 
                         <Col>
                             <div id='dateDisplay'>{product.date}</div>
@@ -31,7 +31,7 @@ const Product = ({product}) => {
                     </Row>
                     <Row>
                         <Col md="3">
-                            <div id='timeLabel'><strong class='text-nowrap'>Time:</strong></div>
+                            <div id='timeLabel'><strong className='text-nowrap'>Time:</strong></div>
                         </Col>
                         <Col>
                             <div id='timeDisplay'>{product.time}</div>
@@ -39,7 +39,7 @@ const Product = ({product}) => {
                     </Row>
                     <Row>
                         <Col md="3">
-                            <div id='locationLabel'><strong class='text-nowrap'>Location:</strong></div>
+                            <div id='locationLabel'><strong className='text-nowrap'>Location:</strong></div>
                         </Col>
                         <Col>
                             <div id='locationDisplay'>{ReactHtmlParser(product.location)}</div>
