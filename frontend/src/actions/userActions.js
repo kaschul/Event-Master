@@ -1,4 +1,4 @@
-//for user login, register, update and logout of profile
+
 import axios from 'axios'
 import {
   USER_LOGIN_REQUEST,
@@ -17,21 +17,21 @@ import {
 } from '../constants/userConstants'
 
 
-export const login = (email, password) => async (dispatch)=> {                              //when login button is hit, action is called(login) email and pw must be passed. 
+export const login = (email, password) => async (dispatch)=> {                              
 
-  //tryblock
+ 
   try{
     dispatch({ type: USER_LOGIN_REQUEST })
 
-    // set up a config to that the api call returns a json.
+  
     const config = {                    
       headers: {
-        //key and value
+        
         'Content-Type': 'application/json'
       }  
     }
-    //pass the key email and password called password and responding email and password, which are stored in parameters called email and password. But since both sides match you can just say email and password once( INSTEAD OF WRITING email:email and password:password). This hsould all return a id, name, email, isAdmin, and token key with corresponding values.
-    const {data} = await axios.post('api/users/login', {email, password}, config)      // attach this var so that it sets content type to application/json in header
+    
+    const {data} = await axios.post('api/users/login', {email, password}, config)      
     
 
     dispatch({
@@ -51,7 +51,7 @@ export const login = (email, password) => async (dispatch)=> {                  
   }
 }
 
-//once this is fired, the local storage is emptied of the user and pass and the action userlogout is fired
+
 export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo')
   dispatch({ type: USER_LOGOUT })

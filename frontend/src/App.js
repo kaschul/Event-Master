@@ -20,14 +20,14 @@ import PlaceOrderScreen from './Screens/PlaceOrderScreen.js';
 const App = () => {
   return (
   <>
-    <Router>                                                                          {/* enclose in Router to make all components routable */}
+    <Router>                                                                         
         <Header />                
-          <main className='py-3'>                                                     {/* create space between header and homescreen  */}
+          <main className='py-3'>                                                     
             <Container>
           
             <Routes>
-              <Route path='/' element={<HomeScreen />} exact />                       {/* url defined to homescreen '/' means its fixed "exact provides specificity" */}
-              <Route path='/product/:id' element={<ProductScreen />} />               {/* : is changing part of URL, element is component you go to */}
+              <Route path='/' element={<HomeScreen />} exact />                       
+              <Route path='/product/:id' element={<ProductScreen />} />               
               <Route path='/cart' element={<CartScreen />} />
               <Route path='/cart/:id' element={<CartScreen />} />
               <Route path='/login' element={<LoginScreen />}/>
