@@ -14,3 +14,7 @@ const errorHandler = (err, req, res, next) => {
 }
 
 export {notFound, errorHandler}
+
+const testvar = () => {
+  console.log("This is a test for github changes")
+}
