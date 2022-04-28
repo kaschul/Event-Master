@@ -1,29 +1,27 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Button, Form } from "react-bootstrap";
-import ReactHtmlParser from "react-html-parser";
-
-import Message from "../components/Message";
-import Loader from "../components/Loader";
-import { listProductDetails } from "../actions/productActions";
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
+import ReactHtmlParser from 'react-html-parser'
+import Message from '../components/Message'
+import Loader from '../components/Loader'
+import { listProductDetails } from '../actions/productActions'
 
 const ProductScreen = () => {
-  const [qty, setQty] = useState(1);
-  const params = useParams();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const productDetails = useSelector((state) => state.productDetails);
-  const { loading, error, product } = productDetails;
+  const [qty, setQty] = useState(1)
+  const params = useParams()
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const productDetails = useSelector((state) => state.productDetails)
+  const { loading, error, product } = productDetails
 
-  // hook
   useEffect(() => {
-    dispatch(listProductDetails(params.id));
-  }, [dispatch, params]);
+    dispatch(listProductDetails(params.id))
+  }, [dispatch, params])
 
   const addToCartHandler = () => {
-    navigate(`/cart/${params.id}?qty=${qty}`);
-  };
+    navigate(`/cart/${params.id}?qty=${qty}`)
+  }
 
   return (
     <>
@@ -45,27 +43,22 @@ const ProductScreen = () => {
               <ListGroup.Item>
                 <h3>{product.name}</h3>
               </ListGroup.Item>
-              
               <ListGroup.Item>
                 by <strong>{product.organizer}</strong>
               </ListGroup.Item>
-
               <ListGroup.Item>
                 {product.description}
               </ListGroup.Item>
-
               <ListGroup.Item>
                 <strong>When:</strong>
                 <br />
                 {product.date} at {product.time}
               </ListGroup.Item>
-
               <ListGroup.Item>
                 <strong>Where:</strong>
                 <br />
                 {ReactHtmlParser(product.location)}
               </ListGroup.Item>
-
               <ListGroup.Item>
                 Price: ${product.price}
               </ListGroup.Item>
@@ -87,7 +80,7 @@ const ProductScreen = () => {
                 {product.ticketsStock > 0 && (
                   <ListGroup.Item>
                     <Row>
-                      <Col>Number of Tickets:</Col>
+                      <Col>Qty:</Col>
                       <Col>
                         <Form.Control
                           as='select'
@@ -108,7 +101,7 @@ const ProductScreen = () => {
                     className='btn-block'
                     type='button'
                     onClick={addToCartHandler}
-                   disabled={product.ticketsStock === 0}
+                    disabled={product.ticketsStock === 0}
                   >
                     Add To Cart
                   </Button>

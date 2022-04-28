@@ -3,15 +3,14 @@ import { getProducts, getProductById } from '../controllers/productController.js
 
 const router = express.Router()
 
-// @desc    fetch all products
-// @route   GET api/products
-// @access  Public route
+// @desc    Fetch all products
+// @route   GET /api/products
+// @access  Public
 router.get('/', getProducts)
 
-// @desc    fetch single product by id
-// @route   GET api/products/:id
-// @access  Public route
+// @desc    Fetch single product
+// @route   Get /api/products/:id
+// @access  Public
 router.get('/:id', getProductById)
-
 
 export default router

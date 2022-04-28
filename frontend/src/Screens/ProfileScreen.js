@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Table, Form, Button, Row, Col } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'

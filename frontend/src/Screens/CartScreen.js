@@ -5,10 +5,7 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
-
-
 const CartScreen = () => {
-
     const location = useLocation()
     const dispatch = useDispatch()
     const params = useParams()
@@ -21,17 +18,17 @@ const CartScreen = () => {
             dispatch(addToCart(productId, qty))
         }
     }, [dispatch, productId, qty])
-    
+
     const cart = useSelector((state) => state.cart)
     const {cartItems} = cart
-    
+
     const removeFromCartHandler = (id) => {
         dispatch(removeFromCart(id))
     }
-    
+
     const checkoutHandler = () => {
         navigate('/login?redirect=/shipping')
-    }        
+    }      
     
 
     return (

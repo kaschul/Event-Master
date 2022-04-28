@@ -6,7 +6,6 @@ import FormContainer from '../components/FormContainer'
 import { saveShippingAddress } from '../actions/cartActions'
 import CheckoutSteps from '../components/CheckoutSteps'
 
-
 const ShippingScreen = () => {
     const cart = useSelector((state) => state.cart)
     const { shippingAddress } = cart
@@ -77,7 +76,6 @@ const ShippingScreen = () => {
                 <Button type='submit' variant='primary'>
                     Continue
                 </Button>
-
             </Form>
         </FormContainer>
     )
