@@ -132,7 +132,7 @@ const products = [
   {
     name: "Anime Festival",
     organizer: "Sakura-Con",
-    image: "/event-images/animefestival.jpg",
+    image: "/event-images/Animefestival.jpg",
     description:
       "Anual convention centered around Anime, manga and video games.",
     date: "April 15-17, 2022",
