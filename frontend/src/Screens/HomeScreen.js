@@ -23,13 +23,16 @@ const HomeScreen = () => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Row>
-          {products.map((product) => (
-            <Col key={product._id} sm={12} md={6} lg={4} lx={3}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>
+        
+          <Row>
+            <div class='card-deck'>
+            {products.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4} lx={3}>
+                <Product product={product} />
+              </Col>
+            ))}
+            </div>
+          </Row>
       )}
     </> 
   )
