@@ -2,8 +2,7 @@
 
 - Ecommerce App
 - MongoDB, Express, React, Node
-
-deployed to heroku at
+- deployed to heroku at
 https://fierce-badlands-94639.herokuapp.com/
 
 ## Homepage
