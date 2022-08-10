@@ -29,12 +29,12 @@ https://fierce-badlands-94639.herokuapp.com/
 - The order summary page displays the shipping address, items ordered with quantity and price, and a total cost breakdown
 ![eventmaster6](https://user-images.githubusercontent.com/47723396/183946465-48905963-3cce-44cf-b83d-4630d81151c0.JPG)
 
-## Order Confirmation & Payment
+## PayPal Integration
 - After confirming the order, the order summary page displays the status of the order and allows you to pay via PayPal
 ![eventmaster7](https://user-images.githubusercontent.com/47723396/183946552-d5bb3066-52a6-4f17-896d-4208ce1dfa53.JPG)
 ![eventmaster9](https://user-images.githubusercontent.com/47723396/183946870-225762fb-4dda-4425-932d-82666f08a2d0.JPG)
 
-## Order Summary - updated after payment
+## Order Summary
 - After payment is complete, the order summary page is updated
 ![eventmaster10](https://user-images.githubusercontent.com/47723396/183946886-1cc085ee-e606-4f0a-b49f-aca4005ec970.JPG)
 
