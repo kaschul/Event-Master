@@ -2,7 +2,7 @@
 
 MERN stack project
 
-on heroku at
+deployed to heroku at
 https://fierce-badlands-94639.herokuapp.com/
 
 Homepage shows a list of events
