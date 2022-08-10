@@ -30,8 +30,9 @@ https://fierce-badlands-94639.herokuapp.com/
 ![eventmaster6](https://user-images.githubusercontent.com/47723396/183946465-48905963-3cce-44cf-b83d-4630d81151c0.JPG)
 
 ## PayPal Integration
-- After confirming the order, the order summary page displays the status of the order and allows you to pay via PayPal
+- After confirming the order, the order summary page displays the status of the order
 ![eventmaster7](https://user-images.githubusercontent.com/47723396/183946552-d5bb3066-52a6-4f17-896d-4208ce1dfa53.JPG)
+- Payment is handled via PayPal integration
 ![eventmaster9](https://user-images.githubusercontent.com/47723396/183946870-225762fb-4dda-4425-932d-82666f08a2d0.JPG)
 
 ## Order Summary
