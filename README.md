@@ -1,4 +1,4 @@
-# Event-Master 
+# EventMaster 
 
 - Ecommerce App
 - MongoDB, Express, React, Node
