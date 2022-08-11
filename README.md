@@ -180,10 +180,6 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
     document.body.appendChild(script)
   }
 ```
-![eventmaster9](https://user-images.githubusercontent.com/47723396/183946870-225762fb-4dda-4425-932d-82666f08a2d0.JPG)
-
-## Order Summary
-- After payment is complete, the order summary page is updated
 ```js
   const [sdkReady, setSdkReady] = useState(false)
   const orderPay = useSelector((state) => state.orderPay)
@@ -201,6 +197,16 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       }
     }   // ... (code omitted for example) ...
 ```
+![eventmaster9](https://user-images.githubusercontent.com/47723396/183946870-225762fb-4dda-4425-932d-82666f08a2d0.JPG)
+
+## Order Summary
+- After payment is complete, the order summary page is updated
+```js
+  const successPaymentHandler = (paymentResult) => {
+    dispatch(payOrder(orderId, paymentResult))
+  }
+```
+
 ![eventmaster10](https://user-images.githubusercontent.com/47723396/183946886-1cc085ee-e606-4f0a-b49f-aca4005ec970.JPG)
 
 ## New User
