@@ -7,8 +7,18 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Homepage
 - Homepage shows a list of events
-- Product data hosted on MongoDB and mapped to homepage on load
 - Uses Redux store to manage state
+```js
+  const productList = useSelector((state) => state.productList)
+```
+- Product data hosted on MongoDB and mapped to homepage on load
+```js
+  {products.map((product) => (
+    <Col key={product._id} sm={12} md={6} lg={4} lx={3}>
+      <Product product={product} />
+    </Col>
+  ))}
+```
 ![eventmaster1](https://user-images.githubusercontent.com/47723396/183946341-d0a7fc70-47e5-4927-b3b1-84dd9799b541.JPG)
 
 ## Product details
