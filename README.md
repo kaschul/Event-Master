@@ -180,6 +180,7 @@ const addPayPalScript = async () => {
   document.body.appendChild(script)
 }
 ```
+- The PayPal button is only displayed until the order has been paid
 ```js
 const [sdkReady, setSdkReady] = useState(false)
 const orderPay = useSelector((state) => state.orderPay)
