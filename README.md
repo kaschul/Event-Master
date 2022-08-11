@@ -49,7 +49,7 @@ const connectDB = async () => {
 ![eventmaster1](https://user-images.githubusercontent.com/47723396/183946341-d0a7fc70-47e5-4927-b3b1-84dd9799b541.JPG)
 
 ## Product details
-- Product details page shows the details of an event and lets you add tickets to the event to your cart
+- Product details page shows the details of an event and lets you add tickets to your cart
 - If no tickets are available, 'Add to Cart' button is disabled
 ```js
   <Button
