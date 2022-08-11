@@ -166,6 +166,17 @@ app.get('/api/config/paypal', (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
 )
 ```
+```js
+  const addPayPalScript = async () => {
+    const { data: clientId } = await axios.get('/api/config/paypal')
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}`
+    script.async = true
+    script.onload = () => { setSdkReady(true) }
+    document.body.appendChild(script)
+  }
+```
 ![eventmaster9](https://user-images.githubusercontent.com/47723396/183946870-225762fb-4dda-4425-932d-82666f08a2d0.JPG)
 
 ## Order Summary
