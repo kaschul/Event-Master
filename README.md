@@ -106,6 +106,26 @@ const connectDB = async () => {
       </Form.Group>
       // ... (etc)
 ```
+- Checkout steps are defined, so you cannot progress to the next step until the current step is completed
+```js
+// Step 1: Sign In
+// Step 2: Shipping
+// Step 3: Payment
+// Step 4: Place Order
+const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
+  return(
+    <Nav className='justify-content-center mb-4'>
+      <Nav.Item>
+        {step1 ? (
+          <LinkContainer to='/login'>
+            <Nav.Link>Sign In</Nav.Link>
+          </LinkContainer>
+        ) : (
+          <Nav.Link disabled>Sign In</Nav.Link>
+        )}
+      </Nav.Item>
+      // ... (etc)
+```
 ![eventmaster4](https://user-images.githubusercontent.com/47723396/183947909-7b171a81-8a79-462b-bc5f-bdcde6b5c1b0.JPG)
 
 ## Checkout
