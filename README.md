@@ -133,7 +133,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 ![eventmaster5](https://user-images.githubusercontent.com/47723396/183946456-21a282f7-2ae7-403e-9edc-e0ed8c4d600f.JPG)
 
 ## Order Summary
-- The order page page displays the shipping address and the items ordered, along with the quantity and price of each item
+- The order page page displays the shipping address, the payment method, and the items ordered (along with the quantity and price of each item)
 - The order summary includes a total cost breakdown
 ```js
   const addDecimals = (num) => {
