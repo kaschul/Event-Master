@@ -184,6 +184,23 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 
 ## Order Summary
 - After payment is complete, the order summary page is updated
+```js
+  const [sdkReady, setSdkReady] = useState(false)
+  const orderPay = useSelector((state) => state.orderPay)
+  const { loading: loadingPay, success: successPay } = orderPay
+// ... (code omitted for example) ...
+    if (!order || successPay) {
+      dispatch({ type: ORDER_PAY_RESET })
+      dispatch(getOrderDetails(orderId))
+    } else if (!order.isPaid) {
+      if (!window.paypal) {
+        addPayPalScript()
+      } else {
+        setSdkReady(true)
+      }
+    }
+// ... (code omitted for example) ...
+```
 ![eventmaster10](https://user-images.githubusercontent.com/47723396/183946886-1cc085ee-e606-4f0a-b49f-aca4005ec970.JPG)
 
 ## New User
