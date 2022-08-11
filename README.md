@@ -73,6 +73,26 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Shipping
 - After signing in or creating an account, you can enter your shipping address
+```js
+  const submitHandler = (e) => {
+    e.preventDefault()
+    dispatch(saveShippingAddress({ address, city, postalCode, country }))
+    navigate('/payment')
+  }
+  // ... (code omitted for example) ...
+    <Form onSubmit={submitHandler}>
+      <Form.Group controlId='address'>
+        <Form.Label>Address</Form.Label>
+        <Form.Control
+          type='text'
+          placeholder='Enter address'
+          value={address}
+          required
+          onChange={(e) => setAddress(e.target.value)}
+        ></Form.Control>
+      </Form.Group>
+      // ... (etc)
+```
 ![eventmaster4](https://user-images.githubusercontent.com/47723396/183947909-7b171a81-8a79-462b-bc5f-bdcde6b5c1b0.JPG)
 
 ## Checkout
