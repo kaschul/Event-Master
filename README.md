@@ -134,6 +134,17 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 
 ## Order Summary
 - The order page page displays the shipping address, the payment method, and the items ordered (along with the quantity and price of each item)
+```js
+    {cart.cartItems.map((item, index) => (
+      <ListGroup.Item key={index}>
+      // ... (code omitted for example) ...
+            <Image src={item.image} alt={item.name} fluid rounded />
+            // ... (code omitted for example) ...
+            <Link to={`/product/${item.product}`}> {item.name} </Link>
+            // ... (code omitted for example) ...
+            {item.qty} x ${item.price} = ${addDecimals(item.qty * item.price)}
+            // ... (code omitted for example) ...
+```
 - The order summary includes a total cost breakdown
 ```js
   const addDecimals = (num) => {
