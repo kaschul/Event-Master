@@ -7,6 +7,7 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Homepage
 - Homepage shows a list of events
+- Header contains navigation to Homepage, Cart, and Login/User Profile
 - Uses Redux store to manage state
 ```js
   const productList = useSelector((state) => state.productList)
