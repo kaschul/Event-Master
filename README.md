@@ -139,7 +139,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
         <Link to={`/product/${item.product}`}> {item.name} </Link>          // ... (code omitted for example) ...
         {item.qty} x ${item.price} = ${addDecimals(item.qty * item.price)}  // ... (code omitted for example) ...
 ```
-- The order summary includes a total cost breakdown
+- The order summary includes the total cost, along with a cost breakdown
 ```js
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2)
