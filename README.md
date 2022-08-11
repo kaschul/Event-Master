@@ -103,8 +103,7 @@ const connectDB = async () => {
           required
           onChange={(e) => setAddress(e.target.value)}
         ></Form.Control>
-      </Form.Group>
-      // ... (etc)
+      </Form.Group>   // ... (etc)
 ```
 - Checkout steps are defined, so you cannot progress to the next step until the current step is completed
 ```js
