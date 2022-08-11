@@ -59,6 +59,15 @@ https://fierce-badlands-94639.herokuapp.com/
     </Message>
   )
 ```
+- Cart summary shows total number of items as well as total cost
+```js
+  <h2>
+    Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items
+  </h2>
+  ${cartItems
+    .reduce((acc, item) => acc + item.qty * item.price, 0)
+    .toFixed(2)}
+```
 
 ![eventmaster3](https://user-images.githubusercontent.com/47723396/183946430-6a73728d-6ed6-4047-b757-eb5c124f40fd.JPG)
 
