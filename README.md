@@ -62,7 +62,7 @@ const connectDB = async () => {
 ![eventmaster2](https://user-images.githubusercontent.com/47723396/183946421-bca43c92-0e42-4cd1-9197-90c8bd2073d1.JPG)
 
 ## Cart
-- Cart page shows you the products currently added to the cart and lets you proceed to checkout page
+- Cart page shows you the products currently added to the cart and lets you proceed to checkout
 - If cart is empty, message and link to product list is displayed, and checkout button is disabled
 ```js
   {cartItems.length === 0 ? (
