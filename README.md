@@ -123,6 +123,11 @@ const connectDB = async () => {
 - After confirming the order, the order summary page displays the status of the order
 ![eventmaster7](https://user-images.githubusercontent.com/47723396/183946552-d5bb3066-52a6-4f17-896d-4208ce1dfa53.JPG)
 - Payment is handled via PayPal integration
+```js
+app.get('/api/config/paypal', (req, res) => 
+  res.send(process.env.PAYPAL_CLIENT_ID)
+)
+```
 ![eventmaster9](https://user-images.githubusercontent.com/47723396/183946870-225762fb-4dda-4425-932d-82666f08a2d0.JPG)
 
 ## Order Summary
