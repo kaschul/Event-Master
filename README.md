@@ -23,7 +23,7 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Product details
 - Product details page shows the details of an event and lets you add tickets to the event to your cart
-- If no tickets are availabe, button is disabled
+- If no tickets are availabe, 'Add to Cart' button is disabled
 ```js
   <Button
     className='btn-block'
@@ -31,8 +31,6 @@ https://fierce-badlands-94639.herokuapp.com/
     onClick={addToCartHandler}
     disabled={product.ticketsStock === 0}
   >
-    Add To Cart
-  </Button>
 ```
 ![eventmaster2](https://user-images.githubusercontent.com/47723396/183946421-bca43c92-0e42-4cd1-9197-90c8bd2073d1.JPG)
 
