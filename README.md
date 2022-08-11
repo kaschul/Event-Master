@@ -51,6 +51,14 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Cart
 - Cart page shows you the products currently added to the cart and lets you proceed to checkout page
+- If cart is empty, message and link to product list is displayed
+```js
+  {cartItems.length === 0 ? (
+    <Message> 
+      Your cart is empty <Link to='/'>Go Back</Link>
+    </Message>
+  )
+```
 ![eventmaster3](https://user-images.githubusercontent.com/47723396/183946430-6a73728d-6ed6-4047-b757-eb5c124f40fd.JPG)
 
 ## Shipping
