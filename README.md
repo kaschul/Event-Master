@@ -38,7 +38,7 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Product details
 - Product details page shows the details of an event and lets you add tickets to the event to your cart
-- If no tickets are availabe, 'Add to Cart' button is disabled
+- If no tickets are available, 'Add to Cart' button is disabled
 ```js
   <Button
     className='btn-block'
