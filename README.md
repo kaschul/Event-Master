@@ -108,10 +108,7 @@ const connectDB = async () => {
 ```
 - Checkout steps are defined, so you cannot progress to the next step until the current step is completed
 ```js
-// Step 1: Sign In
-// Step 2: Shipping
-// Step 3: Payment
-// Step 4: Place Order
+// Step 1: Sign In,  Step 2: Shipping,  Step 3: Payment,  Step 4: Place Order
 const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   return(
     <Nav className='justify-content-center mb-4'>
