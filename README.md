@@ -211,6 +211,7 @@ const successPaymentHandler = (paymentResult) => {
 ![eventmaster10](https://user-images.githubusercontent.com/47723396/183946886-1cc085ee-e606-4f0a-b49f-aca4005ec970.JPG)
 
 ## New User
+- If you do not have a profile, there is an option to create a new account with the functionality to track your orders and save your shipping and payment information
 ```js
 if (!userInfo) {
   navigate('/login')
@@ -224,5 +225,4 @@ if (!userInfo) {
   }
 }
 ```
-- If you do not have a profile, there is an option to create a new account with the functionality to track your orders and save your shipping and payment information
 ![eventmaster11](https://user-images.githubusercontent.com/47723396/183946897-976d5816-281d-4a84-8632-826134810e66.JPG)
