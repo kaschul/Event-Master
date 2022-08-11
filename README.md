@@ -69,7 +69,7 @@ const connectDB = async () => {
     <Message> 
       Your cart is empty <Link to='/'>Go Back</Link>
     </Message>
-  )
+  ) // ... (code omitted for example) ...
 ```
 - Cart summary shows total number of items as well as total cost
 ```js
