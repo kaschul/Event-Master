@@ -98,6 +98,9 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Checkout
 - Checkout is handled via PayPal integration, either with a PayPal account or a credit card
+```js
+  const [paymentMethod, setPaymentMethod] = useState('PayPal')
+```
 ![eventmaster5](https://user-images.githubusercontent.com/47723396/183946456-21a282f7-2ae7-403e-9edc-e0ed8c4d600f.JPG)
 
 ## Order Summary
