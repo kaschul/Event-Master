@@ -134,6 +134,21 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 
 ## Order Summary
 - The order summary page displays the shipping address, items ordered with quantity and price, and a total cost breakdown
+```js
+  const addDecimals = (num) => {
+    return (Math.round(num * 100) / 100).toFixed(2)
+  }
+  cart.itemsPrice = addDecimals(
+    cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
+  )
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 10)
+  cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)))
+  cart.totalPrice = (
+    Number(cart.itemsPrice) +
+    Number(cart.shippingPrice) +
+    Number(cart.taxPrice)
+  ).toFixed(2)
+```
 ![eventmaster6](https://user-images.githubusercontent.com/47723396/183946465-48905963-3cce-44cf-b83d-4630d81151c0.JPG)
 
 ## PayPal Integration
