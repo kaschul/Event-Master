@@ -73,6 +73,7 @@ https://fierce-badlands-94639.herokuapp.com/
 
 ## Shipping
 - After signing in or creating an account, you can enter your shipping address
+- Bootstrap used for form controls
 ```js
   const submitHandler = (e) => {
     e.preventDefault()
