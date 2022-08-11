@@ -121,7 +121,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
           <Nav.Link disabled>Sign In</Nav.Link>
         )}
       </Nav.Item>
-      /* ... (etc) */
+      // ... (etc)
 ```
 ![eventmaster4](https://user-images.githubusercontent.com/47723396/183947909-7b171a81-8a79-462b-bc5f-bdcde6b5c1b0.JPG)
 
