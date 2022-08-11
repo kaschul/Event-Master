@@ -159,13 +159,15 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 
 ## PayPal Integration
 - After confirming the order, the order summary page displays the status of the order
+```js
+  {order.isDelivered ? (
+    <Message variant='success'> Delivered on {order.deliveredAt} </Message>
+  ) : (
+    <Message variant='danger'> Not Delivered </Message>
+  )}
+```
 ![eventmaster7](https://user-images.githubusercontent.com/47723396/183946552-d5bb3066-52a6-4f17-896d-4208ce1dfa53.JPG)
 - Payment is handled via PayPal integration
-```js
-app.get('/api/config/paypal', (req, res) => 
-  res.send(process.env.PAYPAL_CLIENT_ID)
-)
-```
 ```js
   const addPayPalScript = async () => {
     const { data: clientId } = await axios.get('/api/config/paypal')
