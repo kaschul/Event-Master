@@ -8,6 +8,22 @@ https://fierce-badlands-94639.herokuapp.com/
 ## Homepage
 - Homepage shows a list of events
 - Header contains navigation to Homepage, Cart, and Login (changed to User Profile when logged into a user account)
+```js
+  {userInfo ? (
+    <NavDropdown title={userInfo.name} id='username'>
+      <LinkContainer to='/profile'>
+        <NavDropdown.Item> Portal to Account </NavDropdown.Item>
+      </LinkContainer>
+      <NavDropdown.Item onClick={logoutHandler}>
+        Logout
+      </NavDropdown.Item>
+    </NavDropdown>
+  ) : (
+    <LinkContainer to='/login'>
+      <Nav.Link><i className='fa-solid fa-bullseye'></i> Sign In </Nav.Link>
+    </LinkContainer>
+)}
+```
 - Uses Redux store to manage state
 ```js
   const productList = useSelector((state) => state.productList)
