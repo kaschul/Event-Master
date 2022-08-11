@@ -157,8 +157,8 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 ```
 ![eventmaster6](https://user-images.githubusercontent.com/47723396/183946465-48905963-3cce-44cf-b83d-4630d81151c0.JPG)
 
-## PayPal Integration
-- After confirming the order, the order summary page displays the status of the order
+## Order Status
+- after confirming the order, the order summary page displays the status of the order
 ```js
   {order.isDelivered ? (
     <Message variant='success'> Delivered on {order.deliveredAt} </Message>
@@ -167,6 +167,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   )}
 ```
 ![eventmaster7](https://user-images.githubusercontent.com/47723396/183946552-d5bb3066-52a6-4f17-896d-4208ce1dfa53.JPG)
+## PayPal Integration
 - Payment is handled via PayPal integration
 ```js
   const addPayPalScript = async () => {
