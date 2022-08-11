@@ -22,7 +22,7 @@ https://fierce-badlands-94639.herokuapp.com/
     <LinkContainer to='/login'>
       <Nav.Link><i className='fa-solid fa-bullseye'></i> Sign In </Nav.Link>
     </LinkContainer>
-)}
+  )}
 ```
 - Uses Redux store to manage state
 ```js
