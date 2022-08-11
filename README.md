@@ -210,5 +210,18 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
 ![eventmaster10](https://user-images.githubusercontent.com/47723396/183946886-1cc085ee-e606-4f0a-b49f-aca4005ec970.JPG)
 
 ## New User
+```js
+    if (!userInfo) {
+      navigate('/login')
+    } else {
+      if (!user.name) {
+        dispatch(getUserDetails('profile'))
+        dispatch(listMyOrders())
+      } else {
+        setName(user.name)
+        setEmail(user.email)
+      }
+    }
+```
 - If you do not have a profile, there is an option to create a new account with the functionality to track your orders and save your shipping and payment information
 ![eventmaster11](https://user-images.githubusercontent.com/47723396/183946897-976d5816-281d-4a84-8632-826134810e66.JPG)
