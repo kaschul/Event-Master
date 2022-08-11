@@ -34,6 +34,18 @@ https://fierce-badlands-94639.herokuapp.com/
     </Col>
   ))}
 ```
+- Mongoose used to interface with MongoDB
+```js
+import mongoose from 'mongoose'
+const connectDB = async () => {
+  try{
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true
+    })
+    console.log(`MongoDB connected: ${conn.connection.host}`)
+  } //... (code omitted for example) ...
+```
 ![eventmaster1](https://user-images.githubusercontent.com/47723396/183946341-d0a7fc70-47e5-4927-b3b1-84dd9799b541.JPG)
 
 ## Product details
