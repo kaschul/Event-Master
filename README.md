@@ -14,9 +14,7 @@ https://fierce-badlands-94639.herokuapp.com/
       <LinkContainer to='/profile'>
         <NavDropdown.Item> Portal to Account </NavDropdown.Item>
       </LinkContainer>
-      <NavDropdown.Item onClick={logoutHandler}>
-        Logout
-      </NavDropdown.Item>
+      <NavDropdown.Item onClick={logoutHandler}> Logout </NavDropdown.Item>
     </NavDropdown>
   ) : (
     <LinkContainer to='/login'>
