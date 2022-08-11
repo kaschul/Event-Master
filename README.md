@@ -211,7 +211,8 @@ const successPaymentHandler = (paymentResult) => {
 ![eventmaster10](https://user-images.githubusercontent.com/47723396/183946886-1cc085ee-e606-4f0a-b49f-aca4005ec970.JPG)
 
 ## New User
-- If you do not have a profile, there is an option to create a new account with the functionality to track your orders and save your shipping and payment information
+- User accounts have the functionality to track your orders and save your shipping and payment information
+- If you do not have a profile, you will be prompted to create a new account before submitting an order
 ```js
 if (!userInfo) {
   navigate('/login')
