@@ -188,7 +188,9 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   const [sdkReady, setSdkReady] = useState(false)
   const orderPay = useSelector((state) => state.orderPay)
   const { loading: loadingPay, success: successPay } = orderPay
+  
 // ... (code omitted for example) ...
+
     if (!order || successPay) {
       dispatch({ type: ORDER_PAY_RESET })
       dispatch(getOrderDetails(orderId))
