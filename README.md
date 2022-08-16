@@ -143,6 +143,7 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal')
      {item.qty} x ${item.price} = ${addDecimals(item.qty * item.price)}
 // ... (code omitted for example) ...
    </ListGroup>
+)}
 ```
 - The order summary includes the total cost after taxes and fees, along with a cost breakdown
 ```js
