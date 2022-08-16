@@ -140,9 +140,9 @@ const [paymentMethod, setPaymentMethod] = useState('PayPal')
 // ... (code omitted for example) ...
      <Link to={`/product/${item.product}`}> {item.name} </Link>
 // ... (code omitted for example) ...
-     {item.qty} x ${item.price} = ${addDecimals(item.qty * item.price)}
+     <>{item.qty} x ${item.price} = ${addDecimals(item.qty * item.price)}</>
 // ... (code omitted for example) ...
-   </ListGroup>
+   </ListGroup.Item>
 )}
 ```
 - The order summary includes the total cost after taxes and fees, along with a cost breakdown
