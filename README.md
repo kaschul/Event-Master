@@ -4,6 +4,8 @@
 - MongoDB, Express, React, Node
 - deployed to heroku at
 https://fierce-badlands-94639.herokuapp.com/
+- Video of website presentation at 
+https://youtu.be/moR-Q3FsRkY
 
 ## Homepage
 - Homepage shows a list of events
